@@ -5,12 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jestin Edoor | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Hover effects for navigation */
+    nav a {
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+    nav a:hover {
+      color: #8FADFA;
+      transform: translateY(-2px);
+    }
+
+    /* Project hover effect */
+    .project {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Skills section styling */
+    #skills {
+      margin: 40px 0;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .skill {
+      background: #f0f4ff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .skill:hover {
+      transform: scale(1.1);
+      background: #8FADFA;
+      color: white;
+    }
+
+    /* Keyframe for skills animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      .skills-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Jestin Edoor</h1>
     <nav>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
@@ -24,6 +89,17 @@
     </div>
     <p>I'm Jestin, a dedicated data analyst with over two years of hands-on experience in risk management and financial services. I excel at tackling complex data challenges, delivering actionable insights, minimizing risks, and creating substantial value for organizations and their clients. My deep passion lies in transforming raw data into innovative, strategic solutions that drive impactful and measurable results across various industries.</p>
     <p>My hobbies include diving into a wide range of reading materials, from captivating fiction to insightful non-fiction books. I also enjoy immersing myself in video games, watching a variety of movies and TV shows, exploring nature on invigorating hikes, and relaxing with my favorite music playlists.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">Data Analytics 📊</div>
+      <div class="skill">Financial Modeling 💰</div>
+      <div class="skill">Statistical Modeling 📈</div>
+      <div class="skill">Machine Learning Models 🤖</div>
+      <div class="skill">Database Management 🗄️</div>
+    </div>
   </section>
 
   <section id="projects">
@@ -61,6 +137,24 @@
         <li><a href="TS of META (Returns).ipynb" target="_blank">View the Time Series Analysis Notebook</a></li>
       </ul>
     </div>
+    <div class="project">
+      <h3>Customer Segmentation for E-Commerce (Jan 2025 – Mar 2025)</h3>
+      <ul>
+        <li>Analyzed customer purchase data to segment users based on behavior and demographics using clustering algorithms.</li>
+        <li>Improved targeted marketing strategies, increasing customer engagement by 20%.</li>
+        <li>Developed interactive dashboards to visualize customer segments for stakeholders.</li>
+        <li><a href="#" target="_blank">View the Project Details</a></li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Predictive Maintenance for Manufacturing (Apr 2025 – Jun 2025)</h3>
+      <ul>
+        <li>Built machine learning models to predict equipment failures using sensor data.</li>
+        <li>Reduced downtime by 15% through proactive maintenance scheduling.</li>
+        <li>Presented findings to optimize operational efficiency for manufacturing plants.</li>
+        <li><a href="#" target="_blank">View the Project Details</a></li>
+      </ul>
+    </div>
   </section>
 
   <section id="resume">
@@ -77,5 +171,31 @@
   <footer>
     <p>© 2025 Jestin Edoor</p>
   </footer>
+
+  <script>
+    // Add smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Add animation to skills on scroll
+    const skills = document.querySelectorAll('.skill');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = `${index * 0.1}s`;
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.5 });
+
+    skills.forEach(skill => observer.observe(skill));
+  </script>
 </body>
 </html>
