@@ -87,7 +87,7 @@
     <div style="text-align: center; margin-bottom: 20px;">
       <img src="my-photo.jpg" alt="Jestin Edoor" style="width: 200px; height: 200px; border: 5px solid #8FADFA;" />
     </div>
-    <p>I'm Jestin, a dedicated data analyst with over two years of hands-on experience in risk management and financial services. I excel at tackling complex data challenges, delivering actionable insights, minimizing risks, and creating substantial value for organizations and their clients. My deep passion lies in transforming raw data into innovative, strategic solutions that drive impactful and measurable results across various industries.</p>
+    <p>I'm Jestin, a dedicated data analyst with over two years of hands on experience in risk management and financial services. I excel at tackling complex data challenges, delivering actionable insights, minimizing risks, and creating substantial value for organizations and their clients. My deep passion lies in transforming raw data into innovative, strategic solutions that drive impactful and measurable results across various industries.</p>
   </section>
 
   <section id="skills">
@@ -110,11 +110,13 @@
     <div class="project">
       <h3>Credit Risk EDA and Modeling (Aug 2025)</h3>
       <ul>
-        <li>Conducted EDA on a 32,574 record credit risk dataset using R (tidyverse, ggplot2) to visualize key variable distributions.</li>
-        <li>Built a logistic regression model (caret) with 86.6% accuracy and 0.874 AUC, outperforming PCA-based model, using 5-fold cross-validation.</li>
-        <li>Applied PCA, retaining 5 components (95% variance), but original logistic regression performed best (AUC 0.874 vs. 0.830).</li>
-        <li>Analyzed default rates by categorical variables (e.g., loan_grade) using custom R functions and visualizations.</li>
-        <li>Generated ROC curves and AUC metrics (pROC) to evaluate model performance.</li>
+        <li>Conducted exploratory data analysis on a large credit risk dataset with more than 32,000 data using R programming language to visualize key variable distributions.</li>
+        <li>Objective was to predict loan status as either defaulted or not using variables such as age, income, loan intent and loan amount etc.</li>
+        <li>Built a logistic regression model with 86.6% accuracy.</li>
+        <li>Applied PCA (Principal Component Analysis), retaining 5 variables (95% variance), but original logistic regression performed best.</li>
+        <li>Analyzed default rates by categorical variables using custom R functions and visualizations.</li>
+        <li>Generated ROC curves and AUC (Area Under the Curve) metrics to evaluate model performance.</li>
+        <li>Few to nil outliers were identified within the data, most variables fell under normal distribution.</li>
         <li><a href="Credit Risk Analysis.pdf" target="_blank">View the Credit Risk Analysis Notebook (PDF)</a></li>
       </ul>
     </div>
@@ -124,7 +126,7 @@
         <li>Partnered with Precisely to analyze property and address data across 10,000+ properties for precise insurance risk assessment.</li>
         <li>Leveraged flood zone classifications and geodemographic data to enhance accuracy of insurance risk profiles by 25%.</li>
         <li>Implemented machine learning clustering to categorize properties by risk factors like floods and hurricanes, improving risk identification efficiency by 30%.</li>
-        <li>Empowered insurance companies to prioritize and mitigate high-risk properties, reducing potential claims exposure by an estimated $2M annually.</li>
+        <li>Empowered insurance companies to prioritize and mitigate high risk properties, reducing potential claims exposure by an estimated $2M annually.</li>
         <li>Developed a scalable model for future property evaluations, streamlining risk assessment processes by 20%.</li>
         <li>Delivered actionable insights that supported insurers in minimizing financial losses from natural disasters, projecting a 15% reduction in loss ratios.</li>
         <li><a href="https://www.canva.com/design/DAGSvwDjfPA/qs4zbZuEIiH4ofd0kJ5BHQ/view?utm_content=DAGSvwDjfPA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h66ccf80713" target="_blank">View the Presentation</a></li>
@@ -143,9 +145,9 @@
       <h3>Time Series Analysis of Meta Stock Returns (July 2025)</h3>
       <ul>
         <li>Conducted a time series analysis of Meta Platforms’ stock returns from 2021 to 2023 using Python libraries including pandas, matplotlib, and statsmodels to evaluate statistical properties and forecast future performance.</li>
-        <li>Investigated potential cyclical patterns around quarterly earnings—specifically, whether the stock tends to decline before earnings releases and rise afterward. Analysis supported this hypothesis: because Meta does not pay dividends, positive earnings surprises were often followed by post-call stock price increases.</li>
+        <li>Investigated potential cyclical patterns around quarterly earnings specifically, whether the stock tends to decline before earnings releases and rise afterward. Analysis supported this hypothesis: because Meta does not pay dividends, positive earnings surprises were often followed by post call stock price increases.</li>
         <li>Applied time series models such as ARIMA and GARCH to model and predict returns.</li>
-        <li>Identified ARIMA(2, 0, 2) as the best-fitting model based on diagnostic metrics and residual behavior.</li>
+        <li>Identified ARIMA(2, 0, 2) as the best fitting model based on diagnostic metrics and residual behavior.</li>
         <li>Validated model performance using the autocorrelation function (ACF); residuals fell within the 95% confidence bounds, indicating strong model reliability and a good fit.</li>
         <li>Presented results through clear graphs and visualizations to enhance interpretability and communicate key insights effectively.</li>
         <li><a href="TS of META (Returns).pdf" target="_blank">View the Time Series Analysis Notebook (PDF)</a></li>
